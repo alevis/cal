@@ -1,12 +1,30 @@
 body{
-
+    background-color:maroon;
+    vertical-align:middle;
 }
-
 h1{
     font-size:60px;
     color:Orange;
 }
-
 .title{
     font-family:"Satisfy",cursive;
+}
+.quote, .tweet{
+    font-family:'Nunito',sans-serif;
+    margin-top:30px;
+}
+.tweet{ color:#326ada; }
+.marks{
+    color:beige;
+    font-size:40px;
+    font-family:'Kaushan Script',cursive;
+}
+p{
+    color:orange;
+    font-size:35px;
+    font-family:"Rancho";
+    margin-top:40px;
+}
+button{
+    background-color:snow;
 }
