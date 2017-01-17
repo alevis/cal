@@ -1,0 +1,12 @@
+1. Objective: Buid a CodePen.io app that is functionally similar to this:
+	https://codepen.io/FreeCodecamp/full/aNyxXR/
+	
+2. Fulfill the below user stories. Use whichever libraries or APIs you need. Give it your own personal style. 
+
+3. User story: I can start a 25 minute pomodoro and the timer will go off once 25 minutes has elapsed.
+
+4. User Story: I can reset the clock for my next pomodoro.
+
+5. User story: I can customize the length of each pomodoro.
+
+8. You can get feedback on your project by sharing it with your friends on facebook.
