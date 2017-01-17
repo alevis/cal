@@ -1,0 +1,37 @@
+h1{
+    padding-top:40px;
+}
+body{
+    margin-top:60px;
+}
+.welp{
+    display:block;
+    margin-top:60px;
+    margin-left:120px;
+    margin-bottom:50px;
+    margin-right:120px;
+}
+p{
+    padding-top:10px;
+}
+.inner{
+    margin-top:-5px;
+    margin-left:45px;
+    margin-right:45px;
+}
+.timeline{
+    position:relative;
+    margin-top:40px;
+    margin-left:100px;
+    margin-bottom:50px;
+    margin-right:99px;
+}
+.plea{
+    margin-top:50px;
+    margin-left:100px;
+    margin-bottom:40px;
+    margin-right:100px;
+}
+hr{
+    padding-bottom:-40px;
+}
