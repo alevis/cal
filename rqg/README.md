@@ -2,5 +2,5 @@
 
 ## Future plans
 
- - Add react/nodejs/angularjs (frontend)
- - Flask/django (backend)
+ - Add react/**nodejs**/angularjs (frontend)
+ - **flask**/django (*backend*)

@@ -1,4 +1,6 @@
 # Personal Portfolio
 
-## Contents
-Soon to come.
+## TODOs
+
+ - angularjs (frontend)
+ - django (backend)
