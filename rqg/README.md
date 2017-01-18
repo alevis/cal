@@ -1,6 +1,6 @@
 # Random Quote Generator
 
-## Future plans
+## TODOs
 
- - Add react/**nodejs**/angularjs (frontend)
- - **flask**/django (*backend*)
+ 1. Add react/**nodejs**/angularjs (frontend)
+ 2. **flask**/django (*backend*)
