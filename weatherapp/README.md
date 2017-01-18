@@ -1,6 +1,6 @@
 # WeatherApp
 
-## TODOS
+## TODOs
 
  - *angularjs* (frontend)
  - flask (backend)

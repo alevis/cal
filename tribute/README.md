@@ -1,6 +1,6 @@
 # TributePage
 
-## TODOS
+## TODOs
 
- - react/angularjs (frontend)
+ - react/**angularjs** (frontend)
  - flask/**django** (backend)

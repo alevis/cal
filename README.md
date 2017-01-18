@@ -9,3 +9,9 @@
 5. ticTacToe
 6. random quite generator
 7. twitch viewer
+
+### Frontend
+ - ReactJS/AngularJS/NodeJS
+
+### Backend
+- Flask/Django
