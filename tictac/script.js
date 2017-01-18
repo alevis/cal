@@ -31,11 +31,12 @@ function ai_move(cell_number){
     return ai != cell_number ? ai : ai_move(cell_number);
 }
 function remove(marks,number){
-    var blen = board.length;
-    var acpy = []
-    for(var i = 0; i<blen; i++){
-        if(marks[i])
-    }
+    var acpy = [];
+    marks.forEach(function(element){
+        if(element!=number)
+            acpy.push(element);
+    });
+    return acpy;
 }
 var marks = [0,1,2,3,4,5,6,7,8];
 $(document).ready(function(){
