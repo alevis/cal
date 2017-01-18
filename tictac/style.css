@@ -20,11 +20,8 @@ h1{
     margin: 10px auto;
     padding: 30px;
     border-radius: 10px;
-    background-color:black;    
-    /*
     background:-webkit-linear-gradient(to top,#67B26F,#4ca2cd);
     background:linear-gradient(to bottom, #67B26F, #4ca2cd);
-    */
 }
 #tic a, #tac a, #toe a {
     cursor:pointer;
