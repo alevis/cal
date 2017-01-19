@@ -49,6 +49,12 @@ $(document).ready(function(){
                 contentType:"application/json; charset=utf-8",
                 async:false,
                 url:stripped(search string),
+                data:{format:'json'},
+                dataType:"jsonp",
+                error:function(){ alert("fail"); },
+                success: function(resp){
+                    keys = Object.keys(resp)
+                }
             });
         }
     });
