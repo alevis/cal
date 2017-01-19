@@ -23,18 +23,18 @@ var marks = [0,1,2,3,4,5,6,7,8];
 var human_board = [0,0,0,0,0,0,0,0,0];
 var robot_board = [0,0,0,0,0,0,0,0,0];
 $(document).ready(function(){
-    var ai;
+    var ai, human = "X", robot = "0";
     $("#tic,#tac,#toe").click(function(event){
-        event.target.innerHTML="X";
+        event.target.innerHTML=human;
         marks=remove(marks,parseInt(event.target.id));
         human_board[parseInt(event.target.id)] = 1;
-        game_state("X",human_board,marks);
+        game_state(human,human_board,marks);
          
         ai = marks[Math.floor(Math.random()*marks.length)];
-        $("#"+ai).append("0");
+        $("#"+ai).append(robot);
         marks=remove(marks,ai);
         robot_board[ai] = 1;
-        game_state("0",robot_board,marks);
+        game_state(robot,robot_board,marks);
         
     });
     $(".heading").click(function(){ location.reload();  });
