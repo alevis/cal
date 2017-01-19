@@ -53,7 +53,8 @@ $(document).ready(function(){
                 dataType:"jsonp",
                 error:function(){ alert("fail"); },
                 success: function(resp){
-                    keys = Object.keys(resp)
+                    keys = Object.keys(resp);
+                    key_size = keys.length;
                 }
             });
         }
