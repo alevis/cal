@@ -23,6 +23,20 @@ function dparse(search_string){
     var s2 = "format=json&action=query&prop=extracts&";
     var s3 = "exintro=&explaintext=&titles=";
 }
+function link(){
+
+}
+// alternative search function
+function aparse(search_string){
+
+}
+function stripped(search_string){
+    return ""+search_string;
+}
+// Heading insert function
+function insert(heading,text){
+    return b+h+"<strong>"+heading+"</strong>"+"</h3>"+link(heading)+p+text+close;
+}
 $(document).ready(function(){
 
 });
