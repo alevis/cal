@@ -38,5 +38,18 @@ function insert(heading,text){
     return b+h+"<strong>"+heading+"</strong>"+"</h3>"+link(heading)+p+text+close;
 }
 $(document).ready(function(){
-
+    // User pressed enter
+    $("input[type=text]").on("keydown",function(e){
+        // Get the search string
+        if(window.event.keyCode == 13){
+            search_string = $("#search").val().replace(/s\+/g,"%20");
+            $.ajax({
+                crossDomain:true,
+                type:'GET',
+                contentType:"application/json; charset=utf-8",
+                async:false,
+                url:stripped(search string),
+            });
+        }
+    });
 });
