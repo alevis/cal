@@ -55,8 +55,58 @@ $(document).ready(function(){
                 success: function(resp){
                     keys = Object.keys(resp);
                     key_size = keys.length;
+                    $(".list").html("")
+                    for(var i=0; i<key_size; i++){
+                        resp_title = resp['query']['pages'][keys[i]]['title'];
+                        resp_text = resp['query']['pages'][keys[i]]['extract'];
+                        console.log(resp_title);
+                        console.log(resp_text);
+                        if(resp_text.length)
+                            $(".list").append(insert(resp_title,resp_text,substring(0,140)));
+                        else
+                            $(".list").append(insert(resp_title,resp_text));
+                    }
                 }
             });
-        }
+        }//
     });
-});
+    //button handler
+    $(".icon").click(function(e){
+        //get the search string
+        //$("$search").on("change",function(){})
+        if(window.event.keyCode == 13){
+            search_string = $("#search").val().replace(/s\+/g,"%20");
+            $.ajax({
+                crossDomain:true,
+                type:'GET',
+                contentType:"application/json;charset=utf-8",
+                async:false,
+                url:stripped(searched_string),
+                data:{ format: 'json' },
+                dataType:"jsonp",
+                error:function(){ alert("fail"); },
+                success: function(resp){
+                    keys = Object.keys(resp['query']['pages']);
+                    key_size = keys.length;
+                    /*
+                        console.log(resp['parse']);
+                        console.log(resp['parse']['title']);
+                        console.log(resp['parse']['text']['*']);
+                    */
+                $(".list").html("");
+                for(var i = 0; i < key_size; i++){
+                    resp_title = resp['query']['pages'][keys]]['title'];
+                    resp_text = resp['query']['pages'][keys[i]]['extract'];
+                    console.log(resp_title);
+                    console.log(resp_text);
+                if(rep_text.length){
+                    $(".list").append(insert(resp_title,resp_text.substring(0,140)));
+                } else{
+                    $(".list").append(insert(resp_title,resp_text));
+                }
+                }
+                }
+            });
+         }//change();
+    });//end of button handler event
+});//end document ready function 
