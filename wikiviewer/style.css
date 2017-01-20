@@ -29,4 +29,52 @@ input[type=text]{
     background-color:snow;
     background-position:10px 10px;
     background-repeat:no-repeat;
+    
+    padding:10px 10px 10px 60px;
+    -webkit-transition:width 0.5s ease-in-out;
+    -webkit-transition:width 0.5s ease-in-out;
+    transition:width 0.5 ease-in-out;
+}
+/* when the input field gets focus, change its width to 80% */
+input[type=text]:focus{
+    width:35%;
+    background-color:white;
+}
+.bar input#search::-webkit-input-placeholder{
+    color:#65737e;
+}
+.bar input#search::-moz-placeholder{
+    color:#65737e;
+}
+.bar input#search::-moz-placeholder{
+    color:#65737e;
+}
+.bar input#search::-ms-input-placholder{
+    color:#65737e;
+}
+.bar{
+    width:75%;
+    position:fixed;
+    left:50%;
+    margin-left:-37.5%;
+    color:#257772;
+}
+.icon{
+    border:none;
+    display:inline;
+    position:fixed;
+    background:inherit;
+    margin-top:4.3%;
+    margin-left:.6%;
+}
+.list{
+    display:block;
+    position:fixed;
+    margin-top:8%;
+    left:63%;
+    margin-left:-37.5%;
+    width:50%;
+}
+.list-group-item-heading{
+    font-family:'Lato',sans-serif;
 }
