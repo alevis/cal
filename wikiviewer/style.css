@@ -8,8 +8,21 @@ body{
     background:-webkit-linear-gradient(to top, #136a8a, #267871);
     background: linear-gradient(to top, #136a8a, #267871);
 }
-heading{
+.heading{
     color:snow;
     font-family:'Raleway',sans-serif;
     text-shadow:0px 3px 4px #e94e77;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{ outline:none; }
+input[type=text]{
+    font-size:25px;
+    margin-top:5%;
+    text-align:left;
+    width:300px;
+    box-sizing:border-box;
+    border:2px solid #e94e77;
+    border-radius:35px;
 }
