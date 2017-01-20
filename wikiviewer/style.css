@@ -1,1 +1,15 @@
-body{}
+/*
+    levis
+*/
+@import 'https://fonts.googleapis.com/css?family=Dosis|Lato|Muli|Raleway';
+body{
+    font-family:'Dosis',sans-serif;
+    background:#135a8a;
+    background:-webkit-linear-gradient(to top, #136a8a, #267871);
+    background: linear-gradient(to top, #136a8a, #267871);
+}
+heading{
+    color:snow;
+    font-family:'Raleway',sans-serif;
+    text-shadow:0px 3px 4px #e94e77;
+}
