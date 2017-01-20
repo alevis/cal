@@ -6,32 +6,37 @@ var resp_title="";
 var resp_extract = "";
 var search_string = "";
 // List item variables
-var b = "";
-var h = "";
-var p = "";
-var close = "";
-var with_links = "";
+var b = "<blockquote class=\"blockquote\" style=\"background-color:#8cb9b1;\">";
+var h = "<h3 class=\"list-group-item-heading\">";
+var p = "<p class=\"list-group-item-text\">";
+var close = "</a></p></div></blockquote>";
+var no_links = "info";
+var with_links = "links%7Ccategories";
+//query function
 function qparse(search_string,link_param){
     var r1 = "https://en.wikipedia.org/w/api.php?";
     var all = "action=query&generator=allpages&";
     var from = "gaplimit=5&gapfrom=";
     var end = "&prop=";
+    return r1 + all + from + search_string + end + link_param;
 }
 // direct search function
 function dparse(search_string){
     var s1 = "http://en.wikipedia.org/w/api.php?";
     var s2 = "format=json&action=query&prop=extracts&";
     var s3 = "exintro=&explaintext=&titles=";
+    return s1 + s2 + s3 + search_string;
 }
-function link(){
-
+function link(title){
+    var site = "http://en.wikipedia.org/wiki";
+    return "<a href=\""+site+"/"+title+"\" class=\"list-group-item\" target=\"_blank\>";
 }
 // alternative search function
 function aparse(search_string){
-
+    return "https://en.wikipedia.org/w/api.php?action=parse&section=0&prop=text&page="+search_string;
 }
 function stripped(search_string){
-    return ""+search_string;
+    return "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles="+search_string;
 }
 // Heading insert function
 function insert(heading,text){
@@ -61,10 +66,11 @@ $(document).ready(function(){
                         resp_text = resp['query']['pages'][keys[i]]['extract'];
                         console.log(resp_title);
                         console.log(resp_text);
-                        if(resp_text.length)
-                            $(".list").append(insert(resp_title,resp_text,substring(0,140)));
-                        else
-                            $(".list").append(insert(resp_title,resp_text));
+                    if(resp_text.length){
+                     $(".list").append(insert(resp_title,resp_text,substring(0,140)));
+                     } else{
+                       $(".list").append(insert(resp_title,resp_text));
+                       }
                     }
                 }
             });
