@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Wikipedia Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wikipedia page viewer." />
+    <meta name="keywords" content="html5, css3, form, switch" />
+    <meta name="author" content="Levis" />
+    <script src="js/bootstrap.js"></script>
+    <link href="https://maxcdn.bootstrapcd.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-<body>
-
+<!------ Body ------>
+<body class="body">
+    <div class="container">
+        <div class="page-header heading">
+            <h1 class="text-center" style="font-size; 50px; font-weight:550;">
+                <a href="https://en.wikipedia.org/wiki/Special:Random"\
+                    target="_blank" style="text-decoration:none;color:white;">Wikipedia Viewer</a>
+                    </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-centered">
+                            <div class="bar text-center">
+                                <button class="icon">
+                                    <i class="fa fa-search fa-3x"></i>
+                                </button>
+                                <input type="text" id="search" placeholder="search...">
+                                </div>
+                                <!--- Results -->
+                                <div class="list"> </div>
+                            </div>
+                     </div>
+                </div>
 </body>
 </html>
