@@ -1,1 +1,39 @@
-body{}
+body{
+    margin-top:120px;
+    background:#141E30;
+    background:-webkit-linear-gradient(to left, #141E30, #243B55);
+    background:linear-gradient(to left, #141E30, #243B55);
+    font-family: 'Patua One', cursive;
+}
+.table{
+    color:#0073B8;
+    font-size:18px;
+    font-family:'Righteous',cursive;
+}
+.title{
+    color:#23B0DB;
+}
+.test{ color:red; }
+.tempchange{ font-size:20px; }
+#us{
+    background-color:black;
+    font-family:'RIghteous',cursive;
+    border:none;
+    color:white;
+    padding:5px 32px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size:20px;
+}
+#uk{
+    background-color:#0073B8;
+    font-family:'Righteous',cursive;
+    border:none;
+    color:white;
+    padding:5px 32px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+    font-size:20px;
+}

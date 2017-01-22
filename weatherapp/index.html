@@ -2,13 +2,66 @@
 <html lang="en">
 <head>
     <title>Weather App</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    rel="stylesheet"
+integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+crossorigin="anonymous"/>
+<link 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    rel="stylesheet"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<link 
+  href="https://fonts.googleapis.com/css?family=Righteous|Patua+One" 
+  rel="stylesheet"/>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js" 
+    rel="javascript"></script>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/core.js" 
+    rel="javascript"></script>
+<script src="script.js"></script>
 </head>
-
-
+<!----------- body ---------->
 <body>
-
-
+<div class="container">
+    <div class="row well well-sm">
+        <div class="col-md-12">
+            <h1 class="title text-center">Weather App</h1>
+            <iframe id="widget" type="text/html"
+                frameborder="0"
+                height="230"
+                width="100%"
+                src="">
+            </iframe>
+            <p class="test"></p>
+            <div class="col-xs-12 text-center">
+                <button id="us">&#176F</button>
+                <button id="uk">&#176C</button>
+            </div>
+            <table class="table well well-sm">
+                <tbody>
+                    <tr>
+                        <td class="timezone"></td>
+                        <td class="summary"></td>
+                        <td class="temperature"></td>
+                    </tr>
+                    <tr>
+                        <td class="dewpoint"></td>
+                        <td class="humidity"></td>
+                        <td class="windspeed"></td>
+                    </tr>
+                    <tr>
+                        <td class="visibility"></td>
+                        <td class="cloudcover"></td>
+                        <td class="pressure"></td>
+                    </tr>
+                </tbody>
+            </table>
+                    <hr/>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
