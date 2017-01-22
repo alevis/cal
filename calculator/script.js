@@ -21,7 +21,7 @@ $(document).ready(function(){
     });
     $("#operators a").not("#equals").click(function(){
         operator = $(this).text();
-        newnumber = numberl
+        newnumber = number;
         number = "";
         totaldiv.text("0");
     });
