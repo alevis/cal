@@ -1,12 +1,14 @@
 #container{
     height:100%;
     width:100%;
-/*    margin:0 auto; */
 }
 h1{
-    font-size:45px;
+    font-size:55px;
+    font-weight:medium;
     text-align:center;
     width:100%;
+    text-shadow: 1px 2px 4px gray;
+    padding:10px;
 }
 a{
     cursor:pointer;
