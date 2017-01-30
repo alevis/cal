@@ -4,7 +4,13 @@
 /*    margin:0 auto; */
 }
 h1{
-    font: 400 1.5em/1 Arial;
+    font-size:45px;
     text-align:center;
     width:100%;
+}
+a{
+    cursor:pointer;
+}
+.blength,.slength{
+    font-size:25px;
 }
