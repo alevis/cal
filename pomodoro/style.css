@@ -27,3 +27,6 @@ a{
 .blength,.slength{
     font-size:25px;
 }
+#canvas{
+    background-color:white;
+}
