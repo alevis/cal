@@ -18,40 +18,32 @@
         <div class="row text-center">
         <div class="col-md-8">    
         <h1 class="page-header">Pomodoro Clock</h1>
-            <div class="col-md-6">
-                <span>
-                    <a><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
-                </span>
-                <span class="blength"> break length </span>
-                <span>
-                    <a><i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i></a>
-                </span>
-            </div>
-            <div class="col-md-6">
-                <span>
-                    <a><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
-                </span>
-                <span class="slength"> session length </span>
-                <span>
-                    <a><i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i></a>
-                </span>
-            </div>
-            <svg width="500" height="500">
-                <circle 
-                    cx="250" 
-                    cy="200" 
-                    r="150" 
-                    stroke="crimson" 
-                    stroke-width="10"
-                    fill="white"/>
-            </svg>
-         </div>
+        <!-- left column -->
+        <span class="blength"> break length </span>
+        <div class="col-md-6">
+           <span>
+                <a><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
+            </span>
+            <span class="blength"> 25 </span>
+            <span>
+                <a><i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i></a>
+            </span>
         </div>
-    </div>
-    <div class="wrapper">
-        <div class="spinner pie"></div>
-        <div class="filler pie"></div>
-        <div class="mask"></div>
-    </div>
+        <!-- right column -->
+        <span class="slength"> session length </span>
+        <div class="col-md-6">
+            <span>
+                <a><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
+            </span>
+            <span class="slength"> 25 </span>
+            <span>
+                <a><i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i></a>
+            </span>
+        </div>
+        <!-- circle -->
+        <canvas id="canvas" width="350" height="350"></canvas>
+        </div><!--column-->
+        </div><!--row-->
+    </div><!--container-->
 </body>
 </html>
