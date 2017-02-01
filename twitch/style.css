@@ -1,72 +1,65 @@
 @import 
 url(http://fonts.googleapis.com/css?family=Roboto|Raleway);
 html{
-    background: snow;
     box-sizing:border-box;
 }
 body{
-    width:50%;
+    font-family:Raleway,sans-serif;
+    box-sizing:border-box;
     margin: 0px auto;
     padding:0px;
-    background-color:white;
+    background-color:#34495e;
 }
 h1{
-    font-size:55px;
+    color:white;
+    font-size:45px;
     font-weight:medium;
     text-align:center;
     width:100%;
     text-shadow:1px 2px 4px gray;
     padding:10px;
 }
-a{
+.container{
+    display:block;
     box-sizing:border-box;
+    background:snow;
+    width:65%;
+}
+.button{
+    background-color:white;
+    box-sizing:border-box;
+    width:140px;
+    height:50px;
+    border:2px solid lightgray;
+    text-align:center;
+    float:left;
+    cursor:pointer;
     position:relative;
     overflow:hidden;
-    display:inline-block;
-    color:white;
+    margin:0 0 40px 50px;
+}
+.button a{
+    font-family:Raleway;
+    font-size:16px;
+    color:#34495e;
     text-decoration:none;
-    margin:20px;
-    width:100px;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+}
+.effect{
+    width:140px;
     height:50px;
-    border:3px solid;
-    font-family:Raleway, sans-serif;
-    font-size:2em;
-}
-a:before{
-    box-sizing:border-box;
-    content:'';
+    top:-50px;
+    background:#34495e;
     position:absolute;
-    top:100%;
-    height:100%;
-    width:100%;
-    background:white;
-    -webkit-transition:all 0.3s;
-    transition:all 0.3s;
+    transition:all .5s ease;
+    z-index:1;
 }
-a:hover:before{top:0;}
-a:after{
-    box-sizing:border-box;
-    position:absolute;
-    text-align:center;
-    width:100%;
-    line-height:100px;
-    -webkit-transition:all 0.3s;
-    transition:all 0.3s;
+.button:hover .effect{
+    top:0;
 }
-a:hover:after{color:#25354F;}
-.container{
-    margin-left:auto;
-    margin-right:auto;
-    width:50%;
-    margin: 0px auto;
-    background-color:lightgray;
-}
-.navbar-nav{
-    align-content:center;
-    width:100%;
-    text-align:center;
-    >li{
-        float:none;
-        display:inline-block;
-    }
+.button:hover a{
+    color:white;
 }
