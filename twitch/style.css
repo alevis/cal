@@ -62,6 +62,7 @@ a:hover:after{color:#25354F;}
     background-color:lightgray;
 }
 .navbar-nav{
+    align-content:center;
     width:100%;
     text-align:center;
     >li{
