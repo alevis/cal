@@ -61,3 +61,11 @@ a:hover:after{color:#25354F;}
     margin: 0px auto;
     background-color:lightgray;
 }
+.navbar-nav{
+    width:100%;
+    text-align:center;
+    >li{
+        float:none;
+        display:inline-block;
+    }
+}
