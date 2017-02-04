@@ -1,5 +1,10 @@
 $(document).ready(function(){
-    $(".button").click(function(){
-        $(this).toggleClass("active");
-    });
+    $.getJSON(
+        'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp?callback=?',
+        function(data){
+            console.log(Array.from(data));
+            Array.from(data).forEach(function(e){
+                $(".list-group-item").append(e.toString());
+            });
+        });
 });
