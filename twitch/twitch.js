@@ -1,10 +1,12 @@
 $(document).ready(function(){
+	var streams = ["freecodecamp","OgamingSC2","cretetion","freecodecamp","storbeck","habathcx","RobotCaleb","noobs2ninjas","esl_sc2"];
     $.getJSON(
-        'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp?callback=?',
+        'https://wind-bow.gomix.me/twitch-api/streams/esl_sc2',
         function(data){
-            console.log(Array.from(data));
-            Array.from(data).forEach(function(e){
-                $(".list-group-item").append(e.toString());
-            });
+	    var chan = data['stream']['channel'];
+	    console.log(chan);
+	    $(".item").append("<img class=\"img-circle\" src="+chan['logo']+"></img>");
+	    $(".item").append("<a href="+chan['url']+">"+chan['game']+"</a>");
+	    $(".item").append(chan['status']);
         });
 });
