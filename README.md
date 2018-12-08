@@ -10,8 +10,6 @@
 6. random quite generator
 7. twitch viewer
 
-### Frontend
- - ReactJS/AngularJS/NodeJS
-
-### Backend
+### Frameworks
 - Flask/Django
+- Rails
