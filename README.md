@@ -9,7 +9,4 @@
 5. ticTacToe
 6. random quite generator
 7. twitch viewer
-
-### Frameworks
-- Flask/Django
-- Rails
+8. data visualization 

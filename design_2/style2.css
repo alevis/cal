@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Sans+Pro|Roboto|Work+Sans|PT+Sans+Caption');
+/*
+  HEADER SELECTORS
+*/
+h1,h2,h3,h4{ }
+
+h1{
+
+}
+
+h2{
+
+
+}
+
+
+h3{
+
+
+}
+
+h4{
+
+
+}
+body{	
+  background: cornsilk;
+	margin:auto;	
+	border-bottom: 7px solid teal;
+}
+#title{	
+	font-family: 'Josefin Sans', sans-serif;
+	grid-area: tcontent;
+	text-align: center;	
+}
+#title h1{
+	color:maroon;
+	font-size: 48px;
+	text-shadow: 0px 4px 3px gray;
+}
+#title h2{
+	  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: gray;  
+	text-shadow: 0px 1px 0px gray;
+}
+#title span{
+	color:teal;
+}
+#main{
+	grid-area: content;	
+	
+}
+
+main{	
+	align-items: center;
+  font-size:14px;
+	max-height: 50vh;
+	width:100%;
+	background:navajowhite;	
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+		". tcontent ."
+		". content ."
+		". footer .";
+
+}
+
+/*
+    IMAGE SELECTORS
+*/
+#img-div{
+	grid-area: content;
+	display: flex;	
+}
+#image-div img:hover{
+	box-shadow: 0 0 15px 0 gray;
+}
+#image{
+grid-area: content;
+display: flex;
+	
+}
+img{
+	max-width:100%;
+	cursor: pointer;
+	box-shadow: 0 0 10px 0 gray;
+}
+img:hover{
+	cursor: pointer
+	box-shadow: box-shadow: 0 0 15px 0 gray;	
+}
+
+#img-caption{
+	grid-area: content;
+	display: flex;
+	margin-top:auto;
+	padding-bottom: 10px;
+	justify-content: center;
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+}
+ul li{
+	padding: 5px;
+	display: flex;
+}
+
+/*
+  INFO
+*/
+#tribute-info{
+font-family: 'Roboto', sans-serif;	
+grid-area: content;
+display: flex-end;
+	
+}
+#tribute-info h3{
+	color: maroon;
+	text-align: center;
+}
+#tribute-link{
+	text-decoration: none;
+}
+small{
+	font-size: 15px;
+	font-family: 'Josefin Sans',sans-serif;
+}
+a{
+	text-decoration: none;
+}
+main a:hover{
+	color:maroon;
+}
+a:visited{
+	color: steelblue;
+}
+footer{
+	font-family: 'Work Sans', sans-serif;
+	text-align: center;
+	grid-area: footer;
+	display: flex-end;	
+}

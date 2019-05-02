@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+	<html lang="en" dir="ltr" class="client-nojs">
+	<head>
+	<meta charset="UTF-8" ></meta>
+	<head>
+		<title>Project 1</title>
+<style>
+
+	body{
+		background:teal;
+	}
+	#chart{
+		padding:10px;
+		background:white;
+		width:900px;
+		margin:auto;	
+		border:1px solid black;
+		border-radius:7px;
+		display:block;
+	}
+
+	#title{
+		padding: 10px;
+		text-align:center;
+		text-shadow: 0 1px 0 #000;
+	}
+
+	#title:hover{
+		color:maroon;
+	}
+
+</style>
+	</head>
+	<body>
+
+	<div id="chart">
+		<h1 id="title">United States GDP</h1>
+	</div>
+
+	<!-- content here -->	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<!-- <script src="https://d3js.org/d3-axis.v1.min.js"></script> -->
+		<script type="text/javascript">
+			var api_key = "19217FD3-E481-457E-9386-8B448A7E8586";
+			var gdpData = [];
+			//const scale = d3.scaleLinear();	
+			//const output = scale(10);
+			const w = 900;
+			const h = 500;			
+			var url  = "json/gdpdata.json";
+
+			const padding = 50;
+			const scale = d3.scaleLinear();
+
+			req=new XMLHttpRequest();
+			req.responseType = 'json';
+			req.open("GET",url,true);
+			req.send();
+			req.onload=function(){ 
+			gdpData = req.response.map((a)=>a["    Gross domestic product                                                                                                                                                                                                                                      "]);
+
+			var mindate = new Date(1947,0,1), maxdate = new Date(2018,11,31);
+
+			gdpData.sort( (a, b) => a-b );				
+
+			const xScale = d3.scaleLinear().domain([0, gdpData.length]).range([padding, w - padding]);
+			const yScale = d3.scaleLinear().domain([0, d3.max(gdpData)]).range([h - padding, padding]);			
+			const output = scale(10);			
+			const svg = d3.select("#chart").append("svg").attr("width", w).attr("height", h);
+ 
+			svg.selectAll("rect").data(gdpData).enter().append("rect")
+			.attr("x", (d, i) => xScale(i))
+			.attr("y", (d, i) => yScale(d))
+			.attr("fill", 'orange')
+			.attr("width", 2)
+			.attr("height", (d,i) => d)
+			.text(output);
+
+			const xAxis = d3.axisBottom(xScale);
+			// const xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(20).tickFormat(d3.time.format("%B")); 
+			const yAxis = d3.axisLeft(yScale);
+
+			svg.append("g").attr("transform", "translate(0, " + (h - padding) + ")").call(xAxis);
+			svg.append("g").attr("transform", "translate(" + padding + ", 0 )").call(yAxis);
+
+			};
+		</script>
+	</body>
+</html>
